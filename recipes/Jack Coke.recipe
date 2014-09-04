@@ -3,9 +3,9 @@ name="Jack Coke"
 description="Jack and Coke (also referred to as JD and Coke) is a cocktail made with Jack Daniel's whiskey and Coca-Cola"
 
 [ingredient0]
-name = "Coke"
+name = "COKE"
 duration = "10"
 
 [ingredient1] 
-name = "Jack Daniel's"
+name = "JACK DANIELS"
 duration = 4

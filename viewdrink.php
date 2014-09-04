@@ -18,7 +18,9 @@ echo "<h3 class=\"ingredientsLabel\">Ingredients</h3>";
 foreach($recipe->ingredients as $ingredient){
   echo "<p class=\"ingredient\">".$ingredient->name;
   if($_INGREDIENTS[$ingredient->name] == null)
-    echo " - <b><span style=\"color:#fff;\">Not Available</span></b>";
+    echo " <b><span style=\"color:#fff;\">(Not Available)</span></b>";
+  if($_DICTIONARY[$ingredient->name] != null)
+    echo " <span class=\"dictionary\">&nbsp;- <i>".$_DICTIONARY[$ingredient->name]."</i></span> \n";
   echo "</p>";
 }
 

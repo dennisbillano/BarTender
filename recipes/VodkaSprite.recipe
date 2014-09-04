@@ -3,9 +3,9 @@ name="Vodka Sprite"
 description="Delicious cocktail mix of Vodka and Sprite"
 
 [ingredient0]
-name = "Vodka"
+name = "VODKA"
 duration = "3.5"
 
 [ingredient1] 
-name = "Sprite"
+name = "SPRITE"
 duration = 10

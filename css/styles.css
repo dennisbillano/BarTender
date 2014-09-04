@@ -18,17 +18,31 @@ h3 {
   color: #ddd;
 }
 
-.ingredientsLabel, .progressLabel {
+.progressLabel {
   margin-top: 140px;
   margin-left: 200px;
   letter-spacing: 5px;
   margin-bottom: 20px;
 }
 
-.ingredient, .progress {
+.progress {
   margin-left: 270px;
   color: #999;
 }
+
+.ingredientsLabel {
+  margin-top: 140px;
+  margin-left: 150px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.ingredient {
+  margin-left: 200px;
+  color: #999;
+}
+
+
 
 .mainMenu td:hover {
   background: #151515;
@@ -136,4 +150,9 @@ p {
   right: 320px;
   width: 270px;
   height: 270px;
+}
+
+.dictionary {
+  color: #555;
+  font-family: "Lucida Console", Monaco, monospace;
 }
