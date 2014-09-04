@@ -6,10 +6,13 @@ include_once("templates/header.php");
 
 verifyRecipe($_GET['recipe']);
 
-include_once(RECIPE_DIR.$_GET['recipe'].".recipe");
+$recipe = new Recipe();
+$recipe->load($_GET['recipe']);
 
-echo "<h1>$recipe </h1>\n";
+echo "<h1>$recipe->name</h1>\n";
+echo "<div class=\"viewDrinkDescription\"><h3>$recipe->description</h1></div> \n";
 
+echo "<br/><br/> \n";
 echo "<h3>Ingredients</h3>";
 
 foreach($drink as $i){

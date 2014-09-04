@@ -1,5 +1,7 @@
 <?
 
+include_once(dirname(__FILE__)."/recipemodel.php");
+
 function initializePumps(){
    setIODirection(PUMP_0, "out");
    setIODirection(PUMP_1, "out");
@@ -59,7 +61,9 @@ function getRecipes() {
   $files = scandir(RECIPE_DIR);
   foreach($files as $file){
     if(substr($file,-7)==".recipe"){
-       $recipes[] = substr($file,0,-7);
+       $recipe = new Recipe();
+       $recipe->load($file);
+       $recipes[] = $recipe;
     }
   }
   return $recipes;
@@ -78,7 +82,7 @@ function redirect($path){
 function verifyRecipe($recipe=""){
   if($recipe=="")
     redirect("index.php");
-  if(file_exists(RECIPE_DIR.$recipe.".recipe") != TRUE)
+  if(!file_exists(RECIPE_DIR.$recipe.".recipe") && !file_exists(RECIPE_DIR.$recipe))
     redirect("index.php");
 }
 

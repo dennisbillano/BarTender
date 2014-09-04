@@ -6,7 +6,9 @@ include_once("lib/functions.php");
 include_once("templates/header.php");
 
 echo "<h1 class=\"mainHeading\">Drink menu</h1>";
-echo "<table align=\"center\">\n";
+
+echo "<div class=\"divider\">.....................................................................................................................................................................</div> \n";
+echo "<br/><Br/>";
 
 $recipes = getRecipes();
 
@@ -14,20 +16,18 @@ $i=0;
 foreach($recipes as $recipe){
 
   if($i%3==0)
-    echo "  <tr valign=\"middle\"> \n";
+    echo " <table align=\"center\">\n <tr valign=\"middle\"> \n";
 
-  echo "    <td onClick=\"window.location='viewdrink.php?recipe=$recipe';\" align=\"center\" width=\"350\">\n";
-  echo "       <p class=\"name\">$recipe</p> \n";
+  echo "    <td onClick=\"window.location='viewdrink.php?recipe=$recipe->filename';\" align=\"center\" width=\"280\" style=\"padding-left:30px; padding-right:30px; padding-top:30px;\">\n";
+  echo "       <p class=\"name\">$recipe->name</p> \n";
   echo "       <p class=\"description\">$recipe->description</p> \n";
   echo "    </td> \n";
 
   $i++;
 
-  if($i%2==0)
-    echo "  </tr> \n";
+  if($i%3==0)
+    echo "  </tr></table> \n";
 
 }
-
-echo "</table> \n";
 
 include_once("templates/footer.php");
