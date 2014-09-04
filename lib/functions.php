@@ -1,0 +1,84 @@
+<?
+
+function initializePumps(){
+   setIODirection(PUMP_0, "out");
+   setIODirection(PUMP_1, "out");
+   setIODirection(PUMP_2, "out");
+   setIODirection(PUMP_3, "out");
+   setIODirection(PUMP_4, "out");
+   setIODirection(PUMP_5, "out");
+   setIODirection(PUMP_6, "out");
+   setIODirection(PUMP_7, "out");
+}
+
+
+function setIODirection($GPIONumber, $direction){
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, FALSE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$GPIONumber."/function/".$direction);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+}
+
+
+function pump($ingredient, $duration){
+
+   global $_INGREDIENTS;
+
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$_INGREDIENTS[$ingredient]."/value/1");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+
+   usleep($duration*1000000);
+
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$_INGREDIENTS[$ingredient]."/value/0");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+
+}
+
+
+function getRecipes() {
+  $recipes = Array();
+  $files = scandir(RECIPE_DIR);
+  foreach($files as $file){
+    if(substr($file,-7)==".recipe"){
+       $recipes[] = substr($file,0,-7);
+    }
+  }
+  return $recipes;
+}
+
+
+function redirect($path){
+  //Javascript
+  echo "<script>window.location='".$path."';</script> \n";
+
+  //Meta/HTML
+  //echo "<meta http-equiv='refresh' content='0; url=$path'> \n";
+}
+
+
+function verifyRecipe($recipe=""){
+  if($recipe=="")
+    redirect("index.php");
+  if(file_exists(RECIPE_DIR.$recipe.".recipe") != TRUE)
+    redirect("index.php");
+}
+

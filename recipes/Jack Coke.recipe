@@ -1,0 +1,7 @@
+<?php
+
+$drink[0]['ingredient'] = "Coke";
+$drink[0]['duration'] = 10;
+
+$drink[1]['ingredient'] = "Jack Daniel's";
+$drink[1]['duration'] = 4;
