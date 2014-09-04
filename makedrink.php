@@ -19,5 +19,5 @@ foreach($drink as $i){
 
 echo "Done!";
 
-echo "<meta http-equiv='refresh' content='2; url=index.php>";
-
+echo "<meta http-equiv='refresh' content='2; url=index.php'>";
+include_once("templates/footer.php");
