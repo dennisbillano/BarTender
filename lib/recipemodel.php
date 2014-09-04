@@ -28,7 +28,7 @@ class Recipe {
 
       while(!empty($fromIni['ingredient'.$i])){
          $this->ingredients[$i]->name = $fromIni['ingredient'.$i]['name'];
-         $this->ingredients[$i]->duration = $fromIni['ingredient'.$i]['duration'];
+         $this->ingredients[$i]->percentage = $fromIni['ingredient'.$i]['percentage'];
          $i++;
       }
   
