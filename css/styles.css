@@ -44,7 +44,10 @@ h3 {
   color: #999;
 }
 
-
+.mainMenu td {
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
 
 .mainMenu td:hover {
   background: #151515;
