@@ -30,4 +30,6 @@ foreach($recipes as $recipe){
 
 }
 
+echo "<img src=\"images/tools.png\" class=\"tools\" onClick=\"window.location='tools.php';\" /> \n";
+
 include_once("templates/footer.php");

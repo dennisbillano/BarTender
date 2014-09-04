@@ -61,6 +61,36 @@ function pump($ingredient, $duration){
 
 }
 
+function runPump($GPIOPin){
+
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$GPIOPin."/value/1");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+
+}
+
+function stopPump($GPIOPin){
+
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$GPIOPin."/value/0");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+
+}
+
+
+
 
 function getRecipes() {
   $recipes = Array();
