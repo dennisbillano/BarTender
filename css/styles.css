@@ -93,12 +93,13 @@ p {
 
 .divider {
   overflow: hidden;
+  width: 97%;
   height: 50px;
   font-size: 40px;
   color: #555;
   letter-spacing: 5px;
   position: absolute;
-  margin-top: -35px;
+  margin: -35px auto 0 auto;
 }
 
 .button {
@@ -150,8 +151,8 @@ p {
   position: absolute;
   top: 230px;
   right: 320px;
-  width: 270px;
-  height: 270px;
+  width: 240px;
+  height: 240px;
 }
 
 .dictionary {
