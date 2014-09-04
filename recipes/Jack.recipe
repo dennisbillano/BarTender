@@ -1,0 +1,7 @@
+[details]
+name="Shot of Jack"
+description="It is produced in Lynchburg, Tennessee, by the Jack Daniel Distillery"
+
+[ingredient0]
+name = "Jack Daniel's"
+duration = 5

@@ -1,0 +1,11 @@
+[details]
+name="Mojito"
+description="The Mojito is a traditional Cuban drink, known to Americans as a favorite of Ernest Hemingway."
+
+[ingredient0]
+name = "Lime"
+duration = "2"
+
+[ingredient1] 
+name = "Jack Daniel's"
+duration = 4

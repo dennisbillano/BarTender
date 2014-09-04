@@ -1,0 +1,11 @@
+[details]
+name="Vodka Sprite"
+description="Delicious cocktail mix of Vodka and Sprite"
+
+[ingredient0]
+name = "Vodka"
+duration = "3.5"
+
+[ingredient1] 
+name = "Sprite"
+duration = 10
