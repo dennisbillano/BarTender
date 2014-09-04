@@ -20,7 +20,7 @@ foreach($recipe->ingredients as $ingredient){
   if($_INGREDIENTS[$ingredient->name] == null)
     echo " <b><span style=\"color:#fff;\">(Not Available)</span></b>";
   if($_DICTIONARY[$ingredient->name] != null)
-    echo " <span class=\"dictionary\">&nbsp;- <i>".$_DICTIONARY[$ingredient->name]."</i></span> \n";
+    echo " <span class=\"dictionary\"><i>".$_DICTIONARY[$ingredient->name]."</i></span> \n";
   echo "</p>";
 }
 

@@ -38,6 +38,8 @@ h3 {
 }
 
 .ingredient {
+  margin-top: 10px;
+  margin-bottom: 20px;
   margin-left: 200px;
   color: #999;
 }
