@@ -13,18 +13,16 @@ echo "<h1>$recipe->name</h1>\n";
 echo "<div class=\"viewDrinkDescription\"><h3>$recipe->description</h1></div> \n";
 
 echo "<br/><br/> \n";
-echo "<h3>Ingredients</h3>";
+echo "<h3 class=\"ingredientsLabel\">Ingredients</h3>";
 
-foreach($drink as $i){
-  echo $i['ingredient'];
-  if($_INGREDIENTS[$i['ingredient']] == null)
-    echo " - Not Available";
-  echo "<br/>";
+foreach($recipe->ingredients as $ingredient){
+  echo "<p class=\"ingredient\">".$ingredient->name;
+  if($_INGREDIENTS[$ingredient->name] == null)
+    echo " - <b><span style=\"color:#fff;\">Not Available</span></b>";
+  echo "</p>";
 }
 
-echo "<br/><br/>";
-echo "<a href=\"index.php\">Back</a> \n";
-echo "&nbsp;&nbsp;&nbsp;&nbsp;";
-echo "<a href=\"makedrink.php?recipe=".$_GET['recipe']."\">Make Drink</a> \n";
+echo "<div class=\"backButton button\" onClick=\"window.location='index.php';\">Back</div> \n";
+echo "<div class=\"nextButton button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."';\">Make me this drink</div> \n";
 
 include_once("templates/footer.php");
