@@ -6,6 +6,8 @@ include_once("templates/header.php");
 
 verifyRecipe($_GET['recipe']);
 
+$_GET['drink_size'] = $_DRINKSIZE['Medium'];
+
 $recipe = new Recipe();
 $recipe->load($_GET['recipe']);
 
@@ -20,7 +22,8 @@ initializePumps();
 foreach($recipe->ingredients as $i){
   if($_INGREDIENTS[$i->name] != null){
     echo "<p class=\"progress\">Pouring ".$i->name.".. \n";
-    pump($i->name,$i->duration);
+    $duration = ($i->percentage * $_GET['drink_size']) / ( PUMP_FLOW_RATE * 100 );
+    pump($i->name,$duration);
     echo "&nbsp; DONE.</p> \n";
   }
 }

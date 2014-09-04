@@ -4,8 +4,8 @@ description="The Mojito is a traditional Cuban drink, known to Americans as a fa
 
 [ingredient0]
 name = "LIME"
-duration = "2"
+percentage = 33
 
 [ingredient1] 
 name = "JACK DANIELS"
-duration = 4
+percentage = 67
