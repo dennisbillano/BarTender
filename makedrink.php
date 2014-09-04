@@ -16,21 +16,17 @@ echo "<img src=\"images/loader.gif\" class=\"loader\" id=\"loader\" /> ";
 
 initializePumps();
 
-flush();
-ob_flush();
-
 
 foreach($recipe->ingredients as $i){
   if($_INGREDIENTS[$i->name] != null){
+    echo "<p class=\"progress\">Pouring ".$i->name.".. \n";
     pump($i->name,$i->duration);
-    echo "<p class=\"progress\">Done pouring ".$i->name."</p> \n";
+    echo "&nbsp; DONE.</p> \n";
   }
-  flush();
-  ob_flush();
 }
 
-echo "<p class=\"progress\">Enjoy your drink!</p> \n";
 echo "<script> document.getElementById('loader').style.display = 'none'; </script> \n";
+echo "<p class=\"progress\">Enjoy your drink!</p> \n";
 echo "<div class=\"backToMainMenu button\" onClick=\"window.location='index.php';\">Go back to Menu</div> \n";
 
 include_once("templates/footer.php");

@@ -31,6 +31,9 @@ function pump($ingredient, $duration){
 
    global $_INGREDIENTS;
 
+   flush();
+   ob_flush();
+
    $ch = curl_init();
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
    curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$_INGREDIENTS[$ingredient]."/value/1");
@@ -41,6 +44,9 @@ function pump($ingredient, $duration){
    curl_exec($ch);
    curl_close($ch);
 
+   flush();
+   ob_flush();
+   
    usleep($duration*1000000);
 
    $ch = curl_init();
