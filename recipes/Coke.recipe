@@ -1,0 +1,8 @@
+[details]
+name="Coke"
+description="Coca Cola"
+
+[ingredient0]
+name = "COKE"
+percentage = 100
+

@@ -1,0 +1,8 @@
+[details]
+name="Jose Quervo"
+description="Tequila"
+
+[ingredient0]
+name = "JOSE CUERVO"
+percentage = 100
+

@@ -1,0 +1,8 @@
+[details]
+name="Sprite"
+description="Sprite"
+
+[ingredient0]
+name = "SPRITE"
+percentage = 100
+

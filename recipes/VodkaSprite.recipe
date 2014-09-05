@@ -2,10 +2,11 @@
 name="Vodka Sprite"
 description="Delicious cocktail mix of Vodka and Sprite"
 
-[ingredient0]
-name = "VODKA"
-percentage = 25
-
-[ingredient1] 
+[ingredient0] 
 name = "SPRITE"
-percentage = 75
+percentage = 85
+
+[ingredient1]
+name = "ABSOLUT KURANT"
+percentage = 15
+

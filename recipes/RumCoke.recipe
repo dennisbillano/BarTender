@@ -1,0 +1,11 @@
+[details]
+name="Rum Coke"
+description="Captain Morgan Rum and Coke"
+
+[ingredient0]
+name = "COKE"
+percentage = 85
+
+[ingredient1] 
+name = "CAPTAIN MORGAN"
+percentage = 15

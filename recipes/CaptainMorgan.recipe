@@ -1,0 +1,8 @@
+[details]
+name="Captain Morgan"
+description="Captain Morgan Original Spiced Rum"
+
+[ingredient0]
+name = "CAPTAIN MORGAN"
+percentage = 100
+

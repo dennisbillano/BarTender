@@ -36,8 +36,8 @@
   $_PUMPS[PUMP_1] = 15;
   $_PUMPS[PUMP_2] = 15;
   $_PUMPS[PUMP_3] = 15;
-  $_PUMPS[PUMP_4] = 15;
-  $_PUMPS[PUMP_5] = 15;
+  $_PUMPS[PUMP_4] = 7;
+  $_PUMPS[PUMP_5] = 8;
   $_PUMPS[PUMP_6] = 15;
   $_PUMPS[PUMP_7] = 15;
 
@@ -46,16 +46,21 @@
 # Ingredients to pump mapping
 ######################################################################################################
  
-  $_INGREDIENTS['BLACK LABEL'] = PUMP_0;
-  $_INGREDIENTS['JACK DANIELS'] = PUMP_1;
-  $_INGREDIENTS['VODKA'] = null;
-  $_INGREDIENTS['WATER'] = PUMP_2;
-  $_INGREDIENTS['TONIC'] = PUMP_3;
-  $_INGREDIENTS['LIME'] = PUMP_4;
+  $_INGREDIENTS['JACK DANIELS'] = PUMP_0;
+  $_INGREDIENTS['ABSOLUT KURANT'] = PUMP_1;
+  $_INGREDIENTS['SOUTHERN COMFORT'] = PUMP_2;
+  $_INGREDIENTS['SOUTHERN COMFORT LIME'] = PUMP_3;
+  $_INGREDIENTS['CAPTAIN MORGAN'] = PUMP_6;
+  $_INGREDIENTS['JOSE CUERVO'] = PUMP_7;
+  
+  $_INGREDIENTS['SPRITE'] = PUMP_4;
   $_INGREDIENTS['COKE'] = PUMP_5;
-  $_INGREDIENTS['SPRITE'] = PUMP_6;
-  $_INGREDIENTS['BEER'] = PUMP_7;
 
+  $_DICTIONARY['ABSOLUT KURANT'] = "This superb vodka bears the distinctive flavor of natural Black Currants, which grow throughout Sweden, even above the Arctic Circle.";
+  $_DICTIONARY['SOUTHERN COMFORT'] = "In  1874 New Orleans, bartender M.W. Heron crafted a fusion of fruits & spices to create Southern Comfort.";
+  $_DICTIONARY['SOUTHERN COMFORT LIME'] = "Some 125 years after M.W. Heron invented Southern Comfort, another bartender reinvented it as SoCo & Lime. Always playful & ready to enjoy, it's a taste that's too good to keep bottled up.";
+  $_DICTIONARY['CAPTAIN MORGAN'] = "Captain Henry Morgan, the legendary buccaneer, was appointed Governor of Jamaica in 1680. He was a natural born leader-he and his crewwere famous for their love of adventure and their taste for the finest rum. This very spirit lives on in this secret blend of fine Puerto Rican rums and mellow spice.";
+  $_DICTIONARY['JOSE CUERVO'] = "Jose Cuervo Especial Reposado, aged in oak barrels, contains all the magic of the Blue Agave. It makes the perfect Margarita, and drunk straight, is best enjoyed chilled. Jose Cuervo: \"The world's favourite tequila\"";
   $_DICTIONARY['BLACK LABEL'] = "noun [blak ley-buh l]  <br/> &nbsp;&nbsp;&nbsp;&nbsp; brand of Scotch Whisky owned by Diageo that originated in Kilmarnock, Ayrshire, Scotland. ";
   $_DICTIONARY['JACK DANIELS'] = "noun [jak dan-yuh l] <br/> &nbsp;&nbsp;&nbsp;&nbsp; brand of Tennessee whiskey that is the highest selling American whiskey in the world.";
   $_DICTIONARY['VODKA'] = "noun [vod-kuh]  <br/> &nbsp;&nbsp;&nbsp;&nbsp; distilled beverage composed primarily of water and ethanol, sometimes with traces of impurities and flavorings.";
@@ -69,8 +74,8 @@
 
   #all values in ml
   $_DRINKSIZE['Large'] = 250;
-  $_DRINKSIZE['Medium'] = 150;
-  $_DRINKSIZE['Double'] = 80;
+  $_DRINKSIZE['Medium'] = 230;
+  $_DRINKSIZE['Double'] = 120;
   $_DRINKSIZE['Shot'] = 40;
 
   define("RECIPE_DIR","recipes/");
