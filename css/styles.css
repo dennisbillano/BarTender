@@ -126,6 +126,33 @@ p {
   filter: alpha(opacity=100);
 }
 
+.largeSize {
+  position: absolute;
+  bottom: 165px;
+  right: 15px;
+  width: 280px;
+}
+
+.mediumSize {
+  position: absolute;
+  bottom: 115px;
+  right: 15px;
+  width: 280px;
+}
+
+.shotSize {
+  position: absolute;
+  bottom: 65;
+  right: 15px;
+  width: 280px;
+}
+
+.doubleSize {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 280px;
+}
 
 .nextButton {
   position: absolute;

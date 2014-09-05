@@ -1,7 +1,7 @@
 [details]
-name="Shot of Jack"
+name="Jack Daniels"
 description="It is produced in Lynchburg, Tennessee, by the Jack Daniel Distillery"
 
 [ingredient0]
 name = "JACK DANIELS"
-duration = 5
+percentage = 100

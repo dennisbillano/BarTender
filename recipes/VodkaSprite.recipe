@@ -4,8 +4,8 @@ description="Delicious cocktail mix of Vodka and Sprite"
 
 [ingredient0]
 name = "VODKA"
-duration = "3.5"
+percentage = 25
 
 [ingredient1] 
 name = "SPRITE"
-duration = 10
+percentage = 75

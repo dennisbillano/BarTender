@@ -31,6 +31,15 @@
   define("PUMP_6",GPIO_6);
   define("PUMP_7",GPIO_7);
 
+  #flow rate in ml/sec
+  $_PUMPS[PUMP_0] = 15;
+  $_PUMPS[PUMP_1] = 15;
+  $_PUMPS[PUMP_2] = 15;
+  $_PUMPS[PUMP_3] = 15;
+  $_PUMPS[PUMP_4] = 15;
+  $_PUMPS[PUMP_5] = 15;
+  $_PUMPS[PUMP_6] = 15;
+  $_PUMPS[PUMP_7] = 15;
 
 
 ######################################################################################################
@@ -57,5 +66,11 @@
   $_DICTIONARY['SPRITE'] = "noun [sprahyt] <br/> &nbsp;&nbsp;&nbsp;&nbsp; colorless, lemon-lime flavored, caffeine-free soft drink, created by the Coca-Cola Company";
   $_DICTIONARY['BEER'] = "noun [beer] <br/> &nbsp;&nbsp;&nbsp;&nbsp; an alcoholic beverage made by brewing and fermentation from cereals, usually malted barley, and flavored with hops and the like for a slightly bitter taste.";
 
+
+  #all values in ml
+  $_DRINKSIZE['Large'] = 250;
+  $_DRINKSIZE['Medium'] = 150;
+  $_DRINKSIZE['Double'] = 80;
+  $_DRINKSIZE['Shot'] = 40;
 
   define("RECIPE_DIR","recipes/");
