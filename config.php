@@ -32,7 +32,7 @@
   define("PUMP_7",GPIO_7);
 
   #flow rate in ml/sec
-  define("PUMP_FLOW_RATE",3);
+  define("PUMP_FLOW_RATE",15);
 
 
 ######################################################################################################
