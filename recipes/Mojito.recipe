@@ -8,4 +8,8 @@ duration = "2"
 
 [ingredient1] 
 name = "JACK DANIELS"
-duration = 4
+duration = 3
+
+[ingredient2]
+name = "TONIC"
+duration = 2
