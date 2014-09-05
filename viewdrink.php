@@ -31,9 +31,9 @@ echo "<div class=\"backButton button\" onClick=\"window.location='index.php';\">
 if($notavailable != true)
 {
   echo "<div class=\"largeSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Large cup</div> \n";
-  echo "<div class=\"mediumSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Medium cup</div> \n";
-  echo "<div class=\"shotSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Shot</div> \n";
-  echo "<div class=\"doubleSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Double</div> \n";
+  echo "<div class=\"mediumSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Medium';\">Medium cup</div> \n";
+  echo "<div class=\"shotSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Shot';\">Shot</div> \n";
+  echo "<div class=\"doubleSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Double';\">Double</div> \n";
 }
 else
 {
