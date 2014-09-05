@@ -30,7 +30,10 @@ foreach($recipe->ingredients as $ingredient){
 echo "<div class=\"backButton button\" onClick=\"window.location='index.php';\">Back</div> \n";
 if($notavailable != true)
 {
-  echo "<div class=\"nextButton button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."';\">Make me this drink</div> \n";
+  echo "<div class=\"largeSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Large cup</div> \n";
+  echo "<div class=\"mediumSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Medium cup</div> \n";
+  echo "<div class=\"shotSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Shot</div> \n";
+  echo "<div class=\"doubleSize button\" onClick=\"window.location='makedrink.php?recipe=".$_GET['recipe']."&drink_size=Large';\">Double</div> \n";
 }
 else
 {
