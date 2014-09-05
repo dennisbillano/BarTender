@@ -27,9 +27,10 @@ function setIODirection($GPIONumber, $direction){
 }
 
 
-function pump($ingredient, $duration){
+function pump($ingredient, $volume){
 
    global $_INGREDIENTS;
+   global $_PUMPS;
 
    flush();
    ob_flush();
@@ -46,8 +47,8 @@ function pump($ingredient, $duration){
 
    flush();
    ob_flush();
-   
-   usleep($duration*1000000);
+    
+   usleep(($volume/$_PUMPS[$_INGREDIENTS[$ingredient]])*1000000);
 
    $ch = curl_init();
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);

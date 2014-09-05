@@ -32,7 +32,14 @@
   define("PUMP_7",GPIO_7);
 
   #flow rate in ml/sec
-  define("PUMP_FLOW_RATE",15);
+  $_PUMPS[PUMP_0] = 15;
+  $_PUMPS[PUMP_1] = 15;
+  $_PUMPS[PUMP_2] = 15;
+  $_PUMPS[PUMP_3] = 15;
+  $_PUMPS[PUMP_4] = 15;
+  $_PUMPS[PUMP_5] = 15;
+  $_PUMPS[PUMP_6] = 15;
+  $_PUMPS[PUMP_7] = 15;
 
 
 ######################################################################################################
@@ -61,8 +68,8 @@
 
 
   #all values in ml
-  $_DRINKSIZE['Large'] = 350;
-  $_DRINKSIZE['Medium'] = 250;
+  $_DRINKSIZE['Large'] = 250;
+  $_DRINKSIZE['Medium'] = 150;
   $_DRINKSIZE['Double'] = 80;
   $_DRINKSIZE['Shot'] = 40;
 

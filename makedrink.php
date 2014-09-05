@@ -20,8 +20,8 @@ initializePumps();
 foreach($recipe->ingredients as $i){
   if($_INGREDIENTS[$i->name] != null){
     echo "<p class=\"progress\">Pouring ".$i->name.".. \n";
-    $duration = ($i->percentage * $_DRINKSIZE[$_GET['drink_size']]) / ( PUMP_FLOW_RATE * 100 );
-    pump($i->name,$duration);
+    $volume = ($i->percentage * $_DRINKSIZE[$_GET['drink_size']]) / ( 100 );
+    pump($i->name,$volume);
     echo "&nbsp; DONE.</p> \n";
   }
 }
