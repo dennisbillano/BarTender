@@ -4,8 +4,8 @@ description="Jack and Coke (also referred to as JD and Coke) is a cocktail made 
 
 [ingredient0]
 name = "COKE"
-percentage = 90
+percentage = 70
 
 [ingredient1] 
 name = "JACK DANIELS"
-percentage = 10
+percentage = 30

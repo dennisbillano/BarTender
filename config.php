@@ -36,8 +36,8 @@
   $_PUMPS[PUMP_1] = 15;
   $_PUMPS[PUMP_2] = 15;
   $_PUMPS[PUMP_3] = 15;
-  $_PUMPS[PUMP_4] = 7;
-  $_PUMPS[PUMP_5] = 8;
+  $_PUMPS[PUMP_4] = 10;
+  $_PUMPS[PUMP_5] = 7;
   $_PUMPS[PUMP_6] = 15;
   $_PUMPS[PUMP_7] = 15;
 

@@ -4,8 +4,8 @@ description="Captain Morgan Rum and Coke"
 
 [ingredient0]
 name = "COKE"
-percentage = 85
+percentage = 70
 
 [ingredient1] 
 name = "CAPTAIN MORGAN"
-percentage = 15
+percentage = 30

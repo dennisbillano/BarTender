@@ -1,0 +1,11 @@
+[details]
+name="Southern Comfort and Coke"
+description="Southern Comfort and Coke"
+
+[ingredient0]
+name = "COKE"
+percentage = 80
+
+[ingredient1] 
+name = "SOUTHERN COMFORT"
+percentage = 20
