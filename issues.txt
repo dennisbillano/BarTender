@@ -1,6 +1,4 @@
 case design:
-  output hose needs to be higher than input hoses 
-    to try to stop the line leaks
   add drain
     to catch overflows
   add stop button
