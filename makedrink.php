@@ -16,12 +16,12 @@ echo "<img src=\"images/loader.gif\" class=\"loader\" id=\"loader\" /> ";
 
 initializePumps();
 
-
 foreach($recipe->ingredients as $i){
   if($_INGREDIENTS[$i->name] != null){
     echo "<p class=\"progress\">Pouring ".$i->name.".. \n";
     $volume = ($i->percentage * $_DRINKSIZE[$_GET['drink_size']]) / ( 100 );
     pump($i->name,$volume);
+    reversePump($i->name);
     echo "&nbsp; DONE.</p> \n";
   }
 }

@@ -26,6 +26,61 @@ function setIODirection($GPIONumber, $direction){
    curl_close($ch);
 }
 
+function reversePump($ingredient){
+   global $_INGREDIENTS;
+   global $_PUMPS;
+
+   flush();
+   ob_flush();
+   
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/17/value/1");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+   
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$_INGREDIENTS[$ingredient]."/value/1");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+   
+   flush();
+   ob_flush();
+
+
+   usleep(REVERSE_TIME*1000000);
+   
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".$_INGREDIENTS[$ingredient]."/value/0");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+   
+   $ch = curl_init();
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/17/value/0");
+   curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
+   curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+   curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
+   curl_setopt($ch, CURLOPT_POST, 1);
+   curl_exec($ch);
+   curl_close($ch);
+
+}
+
 
 function pump($ingredient, $volume){
 
@@ -89,8 +144,6 @@ function stopPump($GPIOPin){
    curl_close($ch);
 
 }
-
-
 
 
 function getRecipes() {
