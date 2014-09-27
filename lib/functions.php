@@ -35,7 +35,7 @@ function reversePump($ingredient){
    
    $ch = curl_init();
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/17/value/1");
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".REVERSE_PIN."/value/1");
    curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
    curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
    curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
@@ -71,7 +71,7 @@ function reversePump($ingredient){
    
    $ch = curl_init();
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/17/value/0");
+   curl_setopt($ch, CURLOPT_URL, WEBIO_URL."/GPIO/".REVERSE_PIN."/value/0");
    curl_setopt($ch, CURLOPT_USERPWD, WEBIO_AUTH_USER.":".WEBIO_AUTH_PASS);
    curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
    curl_setopt($ch, CURLOPT_NOSIGNAL, 1);
@@ -103,7 +103,7 @@ function pump($ingredient, $volume){
    flush();
    ob_flush();
     
-   usleep(($volume/$_PUMPS[$_INGREDIENTS[$ingredient]])*1000000);
+   usleep((($volume/$_PUMPS[$_INGREDIENTS[$ingredient]])+REVERSE_TIME)*1000000);
 
    $ch = curl_init();
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);

@@ -31,10 +31,11 @@
   define("PUMP_6",GPIO_6);
   define("PUMP_7",GPIO_7);
 
-  define("REVERSE_TIME",0.25);
+  define("REVERSE_TIME",0.5);
+  define("REVERSE_PIN",2);
 
   #flow rate in ml/sec
-#  $_PUMPS[PUMP_0] = 15;
+  $_PUMPS[PUMP_0] = 15;
   $_PUMPS[PUMP_1] = 15;
   $_PUMPS[PUMP_2] = 15;
   $_PUMPS[PUMP_3] = 15;
@@ -48,7 +49,7 @@
 # Ingredients to pump mapping
 ######################################################################################################
  
-#  $_INGREDIENTS['JACK DANIELS'] = PUMP_0;
+  $_INGREDIENTS['JACK DANIELS'] = PUMP_0;
   $_INGREDIENTS['ABSOLUT KURANT'] = PUMP_1;
   $_INGREDIENTS['SOUTHERN COMFORT'] = PUMP_2;
   $_INGREDIENTS['SOUTHERN COMFORT LIME'] = PUMP_3;
